@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 class Rectangle:
     """ a new class"""
-
     number_of_instances = 0
     print_symbol = '#'
 
@@ -99,11 +98,7 @@ class Rectangle:
         area = ""
         if self.__width == 0 or self.__height == 0:
             return area
-        for i in range(self.__height - 1):
-            for j in range(self.__width):
-                area += str(self.print_symbol)
-            area += '\n'
-        return area
+        return '\n'.join((str(self.print_symbol) * self.__width) for i in range(self.__height))
 
     def __repr__(self):
         """returns a string representation
@@ -111,7 +106,6 @@ class Rectangle:
         Returns:
         str: returns a string representation of the rectangle
         to be able to recreate a new instance
-
         """
         return ('Rectangle({},{})'.format(self.__width, self.__height))
 
@@ -120,6 +114,5 @@ class Rectangle:
 
         Prints a msg
         """
+        print("Bye rectangle...")
         type(self).number_of_instances -= 1
-
-        print("Bye rectangle…")
