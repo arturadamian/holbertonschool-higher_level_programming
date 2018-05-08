@@ -104,4 +104,4 @@ class Rectangle:
         str: returns a string representation of the rectangle
         to be able to recreate a new instance
         """
-        return ("Rectangle({},{})".format(self.width, self.height))
+        return ("Rectangle({}, {})".format(self.width, self.height))
