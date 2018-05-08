@@ -10,24 +10,19 @@ class Rectangle:
         height (int): height of Rectangle
 
         """
+
         self.width = width
         self.height = height
 
     @property
     def width(self):
         """getting width
-
-        Returns:
-        int: weight
         """
         return self.__width
 
     @property
     def height(self):
         """getting height
-
-        Returns:
-        int: height
         """
         return self.__height
 
@@ -43,7 +38,7 @@ class Rectangle:
         ValueError: width must be >= 0
 
         """
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -61,47 +56,8 @@ class Rectangle:
         ValueError: height must be >= 0
 
         """
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    def area(self):
-        """ calculates the area of Rectangle
-
-        Returns:
-        int: area
-        """
-        return self.__width * self.__height
-
-    def perimeter(self):
-        """calculates the perimeter
-
-        Returns:
-        int: perimeter
-        """
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        return (self.__width + self.__height) * 2
-
-    def __str__(self):
-        """prints the area with '#"
-
-        Returns:
-        str: a string of # or an empty one
-
-        """
-        area = ""
-        if self.__width == 0 or self.__height == 0:
-            return area
-        return '\n'.join(('#' * self.__width) for i in range(self.__height))
-
-    def __repr__(self):
-        """returns a string representation
-
-        Returns:
-        str: returns a string representation of the rectangle
-        to be able to recreate a new instance
-        """
-        return ('Rectangle({},{})'.format(self.__width, self.__height))
