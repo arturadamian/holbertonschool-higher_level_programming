@@ -114,6 +114,6 @@ class Rectangle:
 
         Prints a msg
         """
+        print("Bye rectangl...")
         type(self).number_of_instances -= 1
 
-        print("Bye rectangl...")
