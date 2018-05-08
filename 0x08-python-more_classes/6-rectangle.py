@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 class Rectangle:
     """ a new class"""
-
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -46,7 +45,7 @@ class Rectangle:
         ValueError: width must be >= 0
 
         """
-        if not isinstance(value, int):
+        if not isinstance(value, (int, float)):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -64,7 +63,7 @@ class Rectangle:
         ValueError: height must be >= 0
 
         """
-        if not isinstance(value, int):
+        if not isinstance(value, (int, float)):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
@@ -107,13 +106,12 @@ class Rectangle:
         str: returns a string representation of the rectangle
         to be able to recreate a new instance
         """
-        return ("Rectangle({}, {})".format(self.__width, self.__height))
+        return ('Rectangle({},{})'.format(self.__width, self.__height))
 
     def __del__(self):
         """deletes an instance
 
         Prints a msg
         """
-        print("Bye rectangl...")
+        print("Bye rectangle...")
         type(self).number_of_instances -= 1
-
