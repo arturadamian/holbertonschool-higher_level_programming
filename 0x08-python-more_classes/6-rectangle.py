@@ -107,7 +107,7 @@ class Rectangle:
         str: returns a string representation of the rectangle
         to be able to recreate a new instance
         """
-        return ('Rectangle({},{})'.format(self.__width, self.__height))
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         """deletes an instance
