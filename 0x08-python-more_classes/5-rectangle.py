@@ -111,4 +111,4 @@ class Rectangle:
 
         Prints a msg
         """
-        print("Bye rectangle…")
+        print("Bye rectangle...")
