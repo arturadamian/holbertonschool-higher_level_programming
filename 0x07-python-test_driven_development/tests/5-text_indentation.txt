@@ -51,6 +51,15 @@ TypeError: text must be a string
 Traceback (most recent call last):
 TypeError: text must be a string
 
-==========================================
-Output tests
-==========================================
+
+>>> text_indentation("Artur Adamian")
+Artur Adamian
+
+# output check for space and string
+>>> text_indentation("Artur. Adamian ")
+Artur.
+<BLANKLINE>
+ Adamian
+
+>>> text_indentation()
+TypeError: text_indentation() missing 1 required positional argument: 'text'
