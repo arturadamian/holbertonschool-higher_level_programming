@@ -33,4 +33,6 @@ class Student:
         Args:
             json: a dictionary
         """
+        if json is None:
+            return
         self.__dict__ = json
