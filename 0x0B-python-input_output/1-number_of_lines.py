@@ -8,7 +8,7 @@ def number_of_lines(filename=""):
         filename (str): filenme
     """
     count = 0
-    with open(filename, "r") as f:
+    with open(filename) as f:
         for line in f:
             count += 1
     return count
