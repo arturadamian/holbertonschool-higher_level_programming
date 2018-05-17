@@ -33,6 +33,6 @@ class Student:
         Args:
             json: a dictionary
         """
-        if json is None:
-            return
-        self.__dict__ = json
+        for key, val in json.items():
+            if key in self.__dict__:
+                self.__dict__[key] = val
