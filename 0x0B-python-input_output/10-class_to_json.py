@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 
 
 def class_to_json(obj):
@@ -11,4 +10,4 @@ def class_to_json(obj):
     Returns:
         dict: the dictionary description
     """
-    return (obj.__dict__)
+    return obj.__dict__
