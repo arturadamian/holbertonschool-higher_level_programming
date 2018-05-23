@@ -57,10 +57,12 @@ class Base:
         filename = cls.__name__ + ".json"
         nlist = []
 
-        with open(filename, "r") as f:
-            js = f.read()
-            lists = cls.from_json_string(js)
-            for ls in lists:
-                nlist.append(cls.create(**ls))
-
+        try:
+            with open(filename, "r") as f:
+                js = f.read()
+                lists = cls.from_json_string(js)
+                for ls in lists:
+                    nlist.append(cls.create(**ls))
+        except:
+            pass
         return nlist
