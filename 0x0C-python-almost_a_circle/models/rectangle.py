@@ -109,7 +109,7 @@ class Rectangle(Base):
     def __str__(self):
         """returns a readable string"""
 
-        return "[Rectangle]({}) {}/{} - {}/{}".format(
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
