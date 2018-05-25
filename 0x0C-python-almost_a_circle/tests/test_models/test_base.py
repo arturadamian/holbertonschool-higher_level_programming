@@ -1,15 +1,24 @@
 #!/usr/bin/python3
 """testing Base class code"""
-import os
-import sys
+import pep8
 import json
 import unittest
 from models.base import Base
-
+from models.rectangle import Rectangle
+from models.square import Square
 
 class TestBaseMethods(unittest.TestCase):
     """class with tests"""
 
+#    def setUp(self):
+#        """setting Up"""
+#        self.base = Base()
+
+#    def tearDown(self):
+#        """ shut down"""
+#        self.base.dispose()
+
+        
     def test_check_id(self):
         """checking the id"""
         r1 = Base()
@@ -35,5 +44,14 @@ class TestBaseMethods(unittest.TestCase):
 
         self.assertIsNotNone(Base.__doc__)
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_pep8_conformance(self):
+        """Test that we conform to PEP8."""
+        pep8style = pep8.StyleGuide(quiet=True)
+        result = pep8style.check_files(['models/base.py', 'models/rectangle.py', 'models/square.py'])
+        self.assertEqual(result.total_errors, 0)
+
+
+
+
+    if __name__ == '__main__':
+        unittest.main()
