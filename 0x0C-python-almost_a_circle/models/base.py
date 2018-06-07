@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""creating Base class"""
+"""creating base class"""
 import json
 """importing json module"""
 
@@ -67,6 +67,6 @@ class Base:
                 lists = cls.from_json_string(js)
                 for ls in lists:
                     nlist.append(cls.create(**ls))
-        except:
+        except BaseException:
             pass
         return nlist
