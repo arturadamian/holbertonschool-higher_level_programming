@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""lists all states with a name starting upper N from the database
+"""
+lists all states with a name starting upper N from the database
 """
 
 import MySQLdb
