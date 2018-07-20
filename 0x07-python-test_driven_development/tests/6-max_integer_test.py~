@@ -1,0 +1,33 @@
+#!/usr/bin/python3
+"""Unittest for max_integer([..])
+"""
+import unittest
+max_integer = __import__('6-max_integer').max_integer
+
+
+class TestMaxInteger(unittest.TestCase):
+    """This is a unittest to find the max_int in a list
+    Raises:
+        TypeError: raises a error if there are....
+    """
+    def instance_test(self):
+        """Test for correct type
+        """
+        self.assertRaises(TypeError, max_integer, {},
+                          msg = "TypeError: None")
+        self.assertRaises(TypeError, max_integer, "Holberton",
+                          msg = "TypeError: None")
+        self.assertRaises(TypeError, max_integer, (1, 2, 6),
+                          msg = "TypeError: wrong type")
+        self.assertRaises(TypeError, max_integer, [1, 2, "dog"],
+                          msg = "TypeError: unorderable types")
+        self.assertRaises(TypeError, max_integer, [[]],
+                          msg = "TypeError: []")
+
+    def output_test(self):
+        """Test for various outputs
+        """
+        self.assertEqual(max_integer([5, 6, 7]), 7)
+        self.assertEqual(max_integer([-1, -2, -3]), -1)
+        self.assertEqual(max_integer([1, 2, 3, 6, 4]), 6)
+        self.assertEqual(max_integer([]), None)

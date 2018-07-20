@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+import unittest
+from models.base import Base
+
+class TestMethods(unittest.TestCase):
+    
+def check_id(self):
+
+    self.assertEqual(Base(), 1)
+    self.assertEqual(Base(12), 12)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+if __name__ == '__main__':
+    unittest.main()
