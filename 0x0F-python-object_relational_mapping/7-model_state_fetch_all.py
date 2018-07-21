@@ -15,10 +15,7 @@ engine = create_engine(
         sys.argv[3]),
     pool_pre_ping=True)
 Session = sessionmaker(bind=engine)
-
 session = Session()
-
-for state in session.query(
-        State).order_by(State.id).all():  # HERE: no SQL query, only objects!
+for state in session.query(State).order_by(State.id).all():
     print("{}: {}".format(state.id, state.name))
 session.close()
