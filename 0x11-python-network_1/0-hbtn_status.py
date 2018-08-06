@@ -2,6 +2,8 @@
 """
 fetches URL with urllib
 """
+
+
 import urllib.request
 
 
