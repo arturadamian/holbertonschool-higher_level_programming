@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-use the package requests to fetch url
+displays the value of the variable X-Request-Id
+in the response header
 """
 
 
