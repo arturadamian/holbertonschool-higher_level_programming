@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-displays the value of the variable X-Request-Id
-in the response header
+sends a POST request to the passed URL with the email
 """
 import requests
 import sys
