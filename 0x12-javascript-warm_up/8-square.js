@@ -3,7 +3,7 @@
 let e = parseInt(process.argv[2]);
 let x = '';
 if (isNaN(e)) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   for (let i = 0; i < e; i++) {
     for (let y = 0; y < e; y++) {
